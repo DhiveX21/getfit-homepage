@@ -1,0 +1,12 @@
+{
+  "addPatientpost": {
+    "name": "patient1",
+    "gender": "Perempuan",
+    "photo": "/images/patient.jpg",
+    "phone": "0895619258715",
+    "address": "link harum manis rt04/02 no 166 kel cirimekar kec.cibinong Kab.Bogor",
+    "nik": "3215646516543",
+    "birthdate": "15-09-1997",
+    "email": "patient@gmail.com"
+  }
+}

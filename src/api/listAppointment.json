@@ -1,0 +1,14 @@
+{
+  "listAppointment": [
+    {
+      "id": 1,
+      "name": "patient1",
+      "appointmentDate": "10-09-2021",
+      "gender": "Perempuan",
+      "address": "20150651325462",
+      "photo": "/images/patient.jpg",
+      "phone": "0895619258715",
+      "status": "Menunggu Konfirmasi"
+    }
+  ]
+}

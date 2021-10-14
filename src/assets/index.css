@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+
+
+
+.animate-floating-sm {
+  animation: floating-sm 5s infinite;
+}
+
+.animate-floating-md {
+  animation: floating-md 5s infinite;
+}
+
+.hero-img {
+  animation: slideIn-left 0.75s, floating-sm 5s 0.75s infinite;
+}
+
+@keyframes floating-sm {
+  0%,
+  100% {
+    animation-delay: 0.75s;
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5%);
+  }
+}
+
+@keyframes floating-md {
+  0%,
+  100% {
+    animation-delay: 0.75s;
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10%);
+  }
+}
+
+.transitionIn-1-fast {
+  animation: transitionIn 0.5s;
+}
+.transitionIn-1-base {
+  animation: transitionIn 0.75s;
+}
+.transitionIn-1-slow {
+  animation: transitionIn 1s;
+}
+
+.transitionFadeIn-1-fast {
+  animation: fade-in 0.5s;
+}
+.transitionFadeIn-1-base {
+  animation: fade-in 0.75s;
+}
+.transitionFadeIn-1-slow {
+  animation: fade-in 1s;
+}
+
+.transitionIn-2-base {
+  animation: slideIn 0.75s;
+}
+
+@keyframes transitionIn {
+  from {
+    opacity: 0;
+    transform: translateY(100px) rotate(-20deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+@keyframes slideIn-left {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes slideIn-right {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+

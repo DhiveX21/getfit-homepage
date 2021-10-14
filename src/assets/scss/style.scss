@@ -1,0 +1,409 @@
+/*!
+ * Bootstrap v4.3.1 (https://getbootstrap.com/)
+ * Copyright 2011-2019 The Bootstrap Authors
+ * Copyright 2011-2019 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+@import "functions";
+@import "variables";
+@import "mixins";
+@import "root";
+@import "reboot";
+@import "type";
+@import "images";
+@import "code";
+@import "grid";
+@import "tables";
+@import "forms";
+@import "buttons";
+@import "transitions";
+@import "dropdown";
+@import "button-group";
+@import "input-group";
+@import "custom-forms";
+@import "nav";
+@import "navbar";
+@import "card";
+@import "breadcrumb";
+@import "pagination";
+@import "badge";
+@import "jumbotron";
+@import "alert";
+@import "progress";
+@import "media";
+@import "list-group";
+@import "close";
+@import "toasts";
+@import "modal";
+@import "tooltip";
+@import "popover";
+@import "carousel";
+@import "spinners";
+@import "utilities";
+@import "print";
+
+.main_font {
+  font-family: "Varela Round", sans-serif;
+}
+
+.section-label {
+  margin-bottom: 10px;
+}
+
+.separator {
+  border-top: 1px solid $primary;
+  margin-top: $default_margin;
+  margin-bottom: $default_margin;
+}
+
+.vertical-separator {
+  border-left: 1px solid $primary;
+}
+
+header {
+  border-bottom: 1px solid $gray-200;
+  width: 100%;
+  position: relative;
+  background-color: $primary;
+  display: flex;
+
+  .nav-logo {
+    font-size: 26px;
+    font-weight: 1000;
+    // font-family: 'Varela Round', sans-serif;
+    color: white;
+    &:hover {
+      color: $gray-400;
+    }
+  }
+
+  .hamburger {
+    float: right;
+    padding: 5px;
+    border-radius: 10px;
+    color: white;
+
+    &:hover {
+      color: $gray-400;
+    }
+  }
+
+  .nav-list {
+    display: none;
+  }
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 40px;
+  img {
+    max-height: 100%;
+  }
+  .slogan {
+    font-size: 22px;
+    font-weight: bold;
+    color: $primary;
+  }
+  p {
+    font-size: 10px;
+    font-weight: bold;
+    color: $primary;
+    margin-bottom: 20px;
+  }
+  .btn {
+    font-size: 10px;
+  }
+}
+
+.founder {
+  padding: 10px;
+  margin-bottom: 40px;
+  .content {
+    display: inline-grid;
+    text-align: left;
+    grid-template-columns: auto auto auto;
+
+    .content-text {
+      .content-label-text {
+        font-size: 14px;
+      }
+      .content-tag {
+        font-size: 12px;
+      }
+    }
+  }
+
+  p {
+    margin-bottom: 4px;
+    font-size: 11px;
+    text-align: justify;
+  }
+  img {
+  }
+  .detail-button {
+    font-size: 12px;
+  }
+}
+
+.team {
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 40px;
+
+  .content {
+    .container-carousel {
+      padding: 1px;
+      .card-promo {
+        border: 5px solid $primary;
+        border-radius: 30px;
+      }
+    }
+
+    .team-name {
+      font-size: 14px;
+    }
+    .team-position {
+      font-size: 12px;
+    }
+    .team-description {
+      font-size: 12px;
+    }
+    img {
+      max-width: 100%;
+      border-radius: 30px;
+    }
+  }
+}
+
+.service {
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 40px;
+  .service-list-row {
+    display: inline-grid;
+    text-align: left;
+    grid-template-columns: auto auto auto;
+    .service_list {
+      border: 0px;
+      margin: 10px;
+      .meta-wrapper {
+        padding: 10px;
+      }
+    }
+  }
+
+  figure {
+    padding: 10px;
+    img {
+      border-radius: 10px;
+    }
+  }
+}
+
+.horizontal-full-card {
+  margin-bottom: 40px;
+  width: 100%;
+  .card-promo {
+    border: 0px solid white;
+  }
+  .card-promo-body {
+    background-color: $primary;
+    text-align: center;
+    color: $white;
+    font-family: "Varela Round", sans-serif;
+    font-weight: bold;
+    border-radius: 10px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .content {
+      div {
+        margin: 10px;
+      }
+      .btn {
+        background-color: $blue;
+        color: white;
+      }
+    }
+  }
+}
+
+.promo-section {
+  padding: 10px;
+  margin: 0;
+  box-sizing: border-box;
+  .section-label {
+    margin-bottom: 25%;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .promo {
+    margin-bottom: 30%;
+  }
+
+  .list-promo {
+    .card-promo {
+      width: 100%;
+      height: 100%;
+      border-radius: 30px;
+      background: $white;
+      box-shadow: 5px 15px 22px rgba(0, 0, 0, 0.2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      position: relative;
+      margin: 5px;
+      margin-bottom: 20px;
+      border: none;
+    }
+    .card-promo .img {
+      padding: 16px;
+    }
+    .card-promo .img img {
+      border-radius: 30px;
+      border: 5px solid $white;
+      width: 100%;
+      transition: 0.3s;
+    }
+    .card-promo:hover {
+      background-color: $pink;
+      color: $white;
+    }
+    .card-promo:hover .img img {
+      transform: scale(1.1);
+      transform: translateY(-100px);
+    }
+
+    .card-promo .desc {
+      position: absolute;
+      text-align: center;
+      bottom: 0;
+      opacity: 0;
+      width: 100%;
+      padding: 16px;
+      color: $pink;
+      background-color: $white;
+      transition: 0.3s;
+      h5 {
+        font-weight: bold;
+        color: $blue;
+      }
+      p {
+        font-size: 12px;
+      }
+    }
+    .card-promo:hover .desc {
+      opacity: 1;
+      transform: translateY(-50px);
+    }
+
+    .btn {
+      background: $white;
+      color: $pink;
+      border-radius: 35px;
+      padding: 10px 45px;
+      text-decoration: none;
+      transition: 0.3s ease;
+    }
+
+    .card-promo:hover .btn {
+      background-color: $pink;
+      color: $white;
+      border: 1px solid $white;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+.footer {
+  .content {
+    .maps {
+      width: 100%;
+      height: 100%;
+
+      iframe {
+        background-color: $primary;
+        width: 100%;
+        border-radius: 30px;
+        padding: 10px;
+      }
+    }
+    .contact {
+      .section-label {
+        font-size: 14px;
+        color: $primary;
+        font-weight: bold;
+        margin-bottom: 0px;
+      }
+      .section-desc {
+        font-size: 12px;
+        color: $secondary;
+        font-weight: bold;
+        margin-bottom: 20px;
+        .btn {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+.sticky-menu-wrapper {
+  .sticky-menu {
+    font-family: sans-serif;
+    background: $pink;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-left: 3px solid white;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+    padding: 15px;
+    width: 70px;
+    z-index: 100;
+    position: fixed;
+    bottom: 30%;
+    right: 0px;
+  }
+  .pulsate {
+    -webkit-animation: pulsate 3s ease-out;
+    -webkit-animation-iteration-count: infinite;
+    opacity: 0.5;
+  }
+
+  @-webkit-keyframes pulsate {
+    0% {
+      opacity: 0.5;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.5;
+    }
+  }
+
+  .tab:after {
+    right: -20px;
+
+    border-radius: 0 0 0 10px;
+    -moz-border-radius: 0 0 0 10px;
+    -webkit-border-radius: 0 0 0 10px;
+
+    -webkit-box-shadow: -10px 0 0 0 #fff;
+    box-shadow: -10px 0 0 0 #fff;
+  }
+
+  .sticky-menu a,
+  .sticky-menu h3 {
+    font-size: 0.9em;
+    display: block;
+    margin: 0 0.5em;
+    color: white;
+  }
+}

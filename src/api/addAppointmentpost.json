@@ -1,0 +1,8 @@
+{
+  "addAppointmentpost": {
+    "id_patient": 20,
+    "appointmentDate": "10-09-2021 15:00:00",
+    "address": "Jl.Johar 3 RT05/02 Kel.Manggarai , Kec.Tebet , DKI Jakarta",
+    "description": "Saya mengalami Sakit Pinggang"
+  }
+}
