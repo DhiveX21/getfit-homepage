@@ -6,11 +6,10 @@ export default function Client(props) {
 
   const toggleActive = (index) => {
     setswitchActive(index);
-    console.log(index);
   };
 
   const feedbackContent = props.data.map((item, key) => (
-    <div className="flex flex-col">
+    <div className="flex flex-col" key={key}>
       <div className={switchActive === key ? "" : " hidden"}>
         <div className="mb-6 px-72">
           <q className="text-pink font-bold text-7xl ">
@@ -30,7 +29,7 @@ export default function Client(props) {
   ));
 
   const feedbackPhoto = props.data.map((item, key) => (
-    <div className="flex flex-row justify-center mb-12">
+    <div className="flex flex-row justify-center mb-12" key={key}>
       <img
         className={
           switchActive === key
@@ -38,6 +37,7 @@ export default function Client(props) {
             : "rounded-full  w-16 h-16 p-1 mx-3 ring-2 ring-pink transition duration-500 ease-in-out transform scale-100"
         }
         src={item.photo}
+        alt="feedbackphoto"
         onClick={() => toggleActive(key)}
       ></img>
     </div>

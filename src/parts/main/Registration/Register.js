@@ -1,4 +1,4 @@
-import React, { useState, Component } from "react";
+import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
 import Button from "elements/Button";
@@ -17,7 +17,6 @@ export default class Register extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    console.log("kesubmit");
   };
 
   render() {

@@ -2,7 +2,6 @@ import React from "react";
 
 import ImageHero from "assets/images/hero.png";
 import Button from "elements/Button";
-import SectionTitle from "elements/SectionTitle";
 import "assets/index.css";
 
 export default function Hero(props) {

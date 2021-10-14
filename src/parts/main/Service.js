@@ -5,24 +5,6 @@ import SectionTitle from "elements/SectionTitle";
 
 import "react-multi-carousel/lib/styles.css";
 
-const responsive = {
-  desktop: {
-    breakpoint: { max: 3000, min: 1024 },
-    items: 3,
-    slidesToSlide: 3, // optional, default to 1.
-  },
-  tablet: {
-    breakpoint: { max: 1024, min: 464 },
-    items: 2,
-    slidesToSlide: 2, // optional, default to 1.
-  },
-  mobile: {
-    breakpoint: { max: 464, min: 0 },
-    items: 1,
-    slidesToSlide: 1, // optional, default to 1.
-  },
-};
-
 export default function Service(props) {
   function number_format(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
@@ -34,10 +16,10 @@ export default function Service(props) {
       <div className="w-full mt-8 mb-16">
         <div className="flex flex-col gap-8 justify-center items-center w-full md:grid md:grid-cols-2 md:gap-8 lg:grid lg:grid-cols-3 lg:gap-8">
           {props.data.map((item, index) => {
-            const discount_display = item.discount == 0 ? "hidden" : "";
-            console.log(discount_display);
+            const discount_display = item.discount === 0 ? "hidden" : "";
+
             return (
-              <div>
+              <div key={index}>
                 <div className="flex flex-wrap content-between justify-center rounded-3xl bg-white shadow-lg ring-pink ring-4 h-128">
                   <div className="h-1/6 my-5">
                     {/* <div className="relative">

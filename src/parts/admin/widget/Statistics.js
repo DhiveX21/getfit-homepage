@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Chart from "elements/Chart";
-import PropTypes from "prop-types";
 
 export default class Statistics extends Component {
   render() {

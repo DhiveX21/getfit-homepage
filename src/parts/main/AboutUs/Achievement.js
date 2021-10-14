@@ -9,6 +9,7 @@ export default function Achievement() {
         <img
           className="w-full max-h-96 object-cover mr-4 rounded-3xl mb-4 md:w-1/2"
           src="/images/service/service3.jpg"
+          alt="service"
         ></img>
         <div className="w-full flex flex-col text-center md:text-left self-center lg:self-auto">
           <div className="font-bold text-2xl text-pink">

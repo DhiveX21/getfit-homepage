@@ -1,10 +1,9 @@
 import React from "react";
-import Button from "elements/Button";
 import SectionTitle from "elements/SectionTitle";
 
 export default function Promo(props) {
-  const promo_list = props.data.map((item) => (
-    <div className="group promo mb-24">
+  const promo_list = props.data.map((item, index) => (
+    <div className="group promo mb-24" key={index}>
       <div className="card-promo w-full h-full rounded-3xl bg-white shadow-lg flex content-center items-center flex-col relative mb-20 lg:mb-0 hover:bg-pink hover:text-white">
         <div className="img p-3 ">
           <img
@@ -21,7 +20,7 @@ export default function Promo(props) {
           </p>
         </div>
         <a
-          href="#"
+          href="/promodetail"
           className="btn transform-gpu bg-white text-pink rounded-4xl py-2 px-8 border-4 border-white
           group-hover:bg-pink
           group-hover:text-white

@@ -1,10 +1,8 @@
-import React, { useEffect, useState, Component } from "react";
+import React, { Component } from "react";
 
-import { Link } from "react-router-dom";
 import propTypes from "prop-types";
 import { Doughnut } from "react-chartjs-2";
-import { Bar } from "react-chartjs-2";
-import { PolarArea } from "react-chartjs-2";
+
 import { Pie } from "react-chartjs-2";
 import { Line } from "react-chartjs-2";
 
@@ -22,8 +20,6 @@ export default class Chart extends Component {
       DoughnutChart: "",
       LineChart: "",
     };
-
-    const rand = () => Math.floor(Math.random() * 255);
 
     if (this.state.type === "doughnut") {
       const data = {
@@ -134,6 +130,5 @@ Chart.propTypes = {
   type: propTypes.string.isRequired,
   dataLabel: propTypes.array.isRequired,
   chartData: propTypes.array.isRequired,
-  type: propTypes.string.isRequired,
   fill: propTypes.bool.isRequired,
 };

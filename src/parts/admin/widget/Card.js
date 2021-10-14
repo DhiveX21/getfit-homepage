@@ -19,21 +19,21 @@ export default class Card extends Component {
                   >
                     <g
                       stroke="none"
-                      stroke-width="1"
+                      strokeWidth="1"
                       fill="none"
-                      fill-rule="evenodd"
+                      fillRule="evenodd"
                     >
                       <polygon points="0 0 24 0 24 24 0 24" />
                       <path
                         d="M12,11 C9.790861,11 8,9.209139 8,7 C8,4.790861 9.790861,3 12,3 C14.209139,3 16,4.790861 16,7 C16,9.209139 14.209139,11 12,11 Z"
                         fill="#ffffff"
-                        fill-rule="nonzero"
+                        fillRule="nonzero"
                         opacity="0.3"
                       />
                       <path
                         d="M3.00065168,20.1992055 C3.38825852,15.4265159 7.26191235,13 11.9833413,13 C16.7712164,13 20.7048837,15.2931929 20.9979143,20.2 C21.0095879,20.3954741 20.9979143,21 20.2466999,21 C16.541124,21 11.0347247,21 3.72750223,21 C3.47671215,21 2.97953825,20.45918 3.00065168,20.1992055 Z"
                         fill="#ffffff"
-                        fill-rule="nonzero"
+                        fillRule="nonzero"
                       />
                     </g>
                   </svg>
@@ -62,9 +62,9 @@ export default class Card extends Component {
                   >
                     <g
                       stroke="none"
-                      stroke-width="1"
+                      strokeWidth="1"
                       fill="none"
-                      fill-rule="evenodd"
+                      fillRule="evenodd"
                     >
                       <g>
                         <polygon points="0 0 24 0 24 24 0 24" />
@@ -72,7 +72,7 @@ export default class Card extends Component {
                       <path
                         d="M12,4 L12,6 C8.6862915,6 6,8.6862915 6,12 C6,15.3137085 8.6862915,18 12,18 C15.3137085,18 18,15.3137085 18,12 C18,10.9603196 17.7360885,9.96126435 17.2402578,9.07513926 L18.9856052,8.09853149 C19.6473536,9.28117708 20,10.6161442 20,12 C20,16.418278 16.418278,20 12,20 C7.581722,20 4,16.418278 4,12 C4,7.581722 7.581722,4 12,4 Z"
                         fill="#ffffff"
-                        fill-rule="nonzero"
+                        fillRule="nonzero"
                         opacity="0.3"
                         transform="translate(12.000000, 12.000000) scale(-1, 1) translate(-12.000000, -12.000000) "
                       />
@@ -103,15 +103,15 @@ export default class Card extends Component {
                   >
                     <g
                       stroke="none"
-                      stroke-width="1"
+                      strokeWidth="1"
                       fill="none"
-                      fill-rule="evenodd"
+                      fillRule="evenodd"
                     >
                       <polygon points="0 0 24 0 24 24 0 24" />
                       <path
                         d="M6.26193932,17.6476484 C5.90425297,18.0684559 5.27315905,18.1196257 4.85235158,17.7619393 C4.43154411,17.404253 4.38037434,16.773159 4.73806068,16.3523516 L13.2380607,6.35235158 C13.6013618,5.92493855 14.2451015,5.87991302 14.6643638,6.25259068 L19.1643638,10.2525907 C19.5771466,10.6195087 19.6143273,11.2515811 19.2474093,11.6643638 C18.8804913,12.0771466 18.2484189,12.1143273 17.8356362,11.7474093 L14.0997854,8.42665306 L6.26193932,17.6476484 Z"
                         fill="#ffffff"
-                        fill-rule="nonzero"
+                        fillRule="nonzero"
                         transform="translate(11.999995, 12.000002) rotate(-180.000000) translate(-11.999995, -12.000002) "
                       />
                     </g>
@@ -141,9 +141,9 @@ export default class Card extends Component {
                   >
                     <g
                       stroke="none"
-                      stroke-width="1"
+                      strokeWidth="1"
                       fill="none"
-                      fill-rule="evenodd"
+                      fillRule="evenodd"
                     >
                       <rect x="0" y="0" width="24" height="24" />
                       <rect

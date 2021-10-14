@@ -1,7 +1,6 @@
 import React from "react";
 
 import ImageTeam from "assets/images/founder.jpeg";
-import Button from "elements/Button";
 import SectionTitle from "elements/SectionTitle";
 
 import Carousel from "react-multi-carousel";
@@ -43,7 +42,7 @@ const responsive = {
 };
 
 export default function Team(props) {
-  const carouselTeamData = props.data.map((item) => (
+  const carouselTeamData = props.data.map((item, index) => (
     // <div className="container-carousel mb-4">
     //   <div className="card">
     //     <div className="card-body">
@@ -71,7 +70,10 @@ export default function Team(props) {
     //   </div>
     // </div>
 
-    <div className="my-10 flex flex-col justify-center items-center  hover:shadow-xl transform hover:scale-105 duration-500">
+    <div
+      className="my-10 flex flex-col justify-center items-center  hover:shadow-xl transform hover:scale-105 duration-500"
+      key={index}
+    >
       <img
         className="w-32 h-32 rounded-full object-cover"
         src={ImageTeam}
@@ -106,13 +108,13 @@ export default function Team(props) {
           autoPlay={false}
           autoPlaySpeed={1000}
           keyBoardControl={true}
-          customTransition="all .5"
+          // customTransition="all .5"
           transitionDuration={300}
-          containerClass="carousel-container"
+          containerclassName="carousel-container"
           removeArrowOnDeviceType={["tablet", "mobile"]}
           deviceType={""}
-          dotListClass="custom-dot-list-style"
-          itemClass="carousel-item-padding-40-px"
+          dotListclassName="custom-dot-list-style"
+          itemclassName="carousel-item-padding-40-px"
           customTransition="transform 100ms ease-in-out"
         >
           {carouselTeamData}

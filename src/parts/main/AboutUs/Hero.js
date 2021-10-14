@@ -2,7 +2,6 @@ import React from "react";
 
 import ImageAboutUsHero from "assets/images/aboutUsHero.jpg";
 
-import Button from "elements/Button";
 import "assets/index.css";
 
 export default function Hero(props) {

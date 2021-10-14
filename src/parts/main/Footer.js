@@ -1,15 +1,10 @@
 import React from "react";
 
-import Button from "elements/Button";
-import BrandIcon from "parts/main/LandingPage/IconText";
-
 export default function Footer(props) {
-  const getNavLinkClass = (path) => {
-    return props.location.pathname === path ? " active" : "";
-  };
-
-  const maps_list = props.data.map((item) => (
+  const maps_list = props.data.map((item, key) => (
     <iframe
+      title={key}
+      key={key}
       className="ring-4 p-2 mb-8 ring-pink rounded-3xl w-full"
       src={item.maps}
       loading="lazy"
@@ -17,17 +12,17 @@ export default function Footer(props) {
   ));
 
   const contactPerson = props.data.map((item, i) => (
-    <>
+    <div key={i}>
       <div className="text-pink my-1 text-sm">Contact Person {i + 1}</div>
       <div className="text-gray-700 text-sm">{item.phone_number}</div>
-    </>
+    </div>
   ));
 
   const address = props.data.map((item, i) => (
-    <>
+    <div key={i}>
       <div className="text-pink my-1 text-sm">Address {i + 1}</div>
       <div className="text-gray-700 text-sm ">{item.address}</div>
-    </>
+    </div>
   ));
 
   return (

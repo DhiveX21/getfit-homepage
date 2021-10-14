@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import propTypes from "prop-types";
 
 export default function SectionTitle(props) {
@@ -14,6 +13,6 @@ export default function SectionTitle(props) {
 }
 
 SectionTitle.propTypes = {
-  preTitle: propTypes.array.isRequired,
-  Title: propTypes.array.isRequired,
+  preTitle: propTypes.string.isRequired,
+  Title: propTypes.string.isRequired,
 };

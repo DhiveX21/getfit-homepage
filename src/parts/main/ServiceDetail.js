@@ -17,10 +17,10 @@ export default function ServiceDetail(props) {
       <div className="w-full mt-8 mb-16">
         <div className="flex flex-col gap-8 justify-center items-center w-full lg:grid lg:grid-cols-3 lg:gap-8">
           {props.data.map((item, index) => {
-            const discount_display = item.discount == 0 ? "hidden" : "";
-            console.log(discount_display);
+            const discount_display = item.discount === 0 ? "hidden" : "";
+
             return (
-              <div>
+              <div key={index}>
                 <div className="flex flex-wrap content-between justify-center rounded-3xl bg-white shadow-lg ring-pink ring-4 h-128">
                   <div className="h-1/6 my-5">
                     {/* <div className="relative">

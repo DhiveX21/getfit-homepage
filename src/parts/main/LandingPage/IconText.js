@@ -1,6 +1,5 @@
 import React from "react";
 
-import SectionTitle from "elements/SectionTitle";
 import Button from "elements/Button";
 
 export default function IconText() {

@@ -1,14 +1,6 @@
 import React from "react";
 
-import Button from "elements/Button";
-import BrandIcon from "parts/main/LandingPage/IconText";
-import Hamburger from "assets/images/hamburger.png";
-
 export default function StickyMenu(props) {
-  const getNavLinkClass = (path) => {
-    return props.location.pathname === path ? " active" : "";
-  };
-
   return (
     <div className="">
       <div className=""></div>

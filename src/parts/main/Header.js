@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+
 import { Link } from "react-router-dom";
 
 import Button from "elements/Button";
@@ -7,10 +7,6 @@ import LogoImageWhite from "assets/images/logo_white.png";
 import "assets/index.css";
 
 export default function Header(props) {
-  const getNavLinkClass = (path) => {
-    return props.location.pathname === path ? " active" : "";
-  };
-
   return (
     <header
       className={[

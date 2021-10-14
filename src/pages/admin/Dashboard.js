@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import api from "api/api.json";
+
 import Header from "parts/admin/Header";
 import Card from "parts/admin/widget/Card";
 import Title from "parts/admin/widget/Title";

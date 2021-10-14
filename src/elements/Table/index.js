@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React from "react";
+
 import propTypes from "prop-types";
 import Button from "elements/Button";
 import DataTable from "react-data-table-component";
@@ -46,6 +46,7 @@ export default function Table(props) {
       (item, index) =>
         (dataProps[index].detailButton = (
           <Button
+            key={index}
             className="bg-blue py-2 h-full text-white  rounded shadow px-4  hover:-translate-y-1 transform transition ease-in-out duration-200"
             href={
               props.detailButton === undefined
@@ -74,6 +75,7 @@ export default function Table(props) {
       (item, index) =>
         (dataProps[index].editButton = (
           <Button
+            key={index}
             className="bg-yellow py-2 h-full text-gray-700 rounded shadow px-4  hover:-translate-y-1 transform transition ease-in-out duration-200"
             href={
               props.editButton === undefined
@@ -101,6 +103,7 @@ export default function Table(props) {
       (item, index) =>
         (dataProps[index].deleteButton = (
           <Button
+            key={index}
             className="bg-pink py-2 h-full text-white  rounded shadow px-4  hover:-translate-y-1 transform transition ease-in-out duration-200"
             href={
               props.deleteButton === undefined
@@ -123,5 +126,5 @@ export default function Table(props) {
 
 Table.propTypes = {
   tableColumn: propTypes.array.isRequired,
-  tableContent: propTypes.array.isRequired,
+  // tableContent: propTypes.array.isRequired,
 };
