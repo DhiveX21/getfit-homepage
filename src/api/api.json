@@ -14,6 +14,7 @@
       "name": "Rifa Rahmalia. Amd.Ft",
       "description": "Education And Training Manager di Lembaga Vokasi Universitas Indonesia.  Lecturer University of Indonesia.  Senior Physiotherapist OM Active Clinic",
       "position": "therapist",
+      "photo": "/images/hero.jpg",
       "url": "https://id.linkedin.com/in/faizah-abdullah-24a332b3"
     },
     {
@@ -171,6 +172,12 @@
     },
     {
       "id": 4,
+      "photo": "/images/galleries/5.jpg",
+      "caption": "Exercise",
+      "subCaption": "Event 2021 ddengan sejuta keseruan."
+    },
+    {
+      "id": 5,
       "photo": "/images/galleries/4.jpg",
       "caption": "Exercise",
       "subCaption": "Event 2021 ddengan sejuta keseruan."

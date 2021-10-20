@@ -1,0 +1,1703 @@
+{
+    "openapi":"3.0.2",
+    "info": {
+        "title":"GetfitWithPhsyo RESTful API",
+        "description":"RESTful API Spec",
+        "version":"1.0"
+    },
+    "servers": [
+        {"url":"https://localhost:3000/api/v1"}
+    ],
+    "paths": {
+        "/register":{
+            "post":{
+                "tags": ["Users API"],
+                "description": "Register User Patient",
+                "summary": "Register User Patient",
+                "requestBody":{
+                    "description": "Input Data User Patient",
+                    "content": {
+                        "application/json":{
+                            "schema":{
+                                "type": "object",
+                                "properties": {
+                                    "name" :{
+                                        "type": "string"
+                                    },
+                                    "gender":{
+                                        "type": "string"
+                                    },
+                                    "phone":{
+                                        "type": "string"
+                                    },
+                                    "address":{
+                                        "type": "string"
+                                    },
+                                    "nik":{
+                                        "type": "string"
+                                    },
+                                    "birthdate":{
+                                        "type": "string"
+                                    },
+                                    "email":{
+                                        "type": "string"
+                                    },
+                                    "password":{
+                                        "type": "string"
+                                    }
+                                }
+                            },
+                            "example":{
+                                "name": "patient1",
+                                "gender": "Perempuan",
+                                "phone": "0895619258715",
+                                "address": "link harum manis rt04/02 no 166 kel cirimekar kec.cibinong Kab.Bogor",
+                                "nik": "3215646516543",
+                                "birthdate": "15-09-1997",
+                                "email": "patient@gmail.com",
+                                "password": "12345678"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200":{
+                        "description": "Success Register User",
+                        "content": {
+                            "application/json":{
+                                "schema":{
+                                    "type": "object",
+                                    "properties": {
+                                        "meta":{
+                                            "$ref":"#/components/schemas/Meta"
+                                        },
+                                        "data":{
+                                            "type": "array",
+                                            "items":{
+                                                "type": "object",
+                                                "properties": {
+                                                    "name":{
+                                                        "type": "string"
+                                                    },
+                                                    "gender":{
+                                                        "type":"string"
+                                                    },
+                                                    "phone":{
+                                                        "type": "string"
+                                                    },
+                                                    "address":{
+                                                        "type": "string"
+                                                    },
+                                                    "nik":{
+                                                        "type": "string"   
+                                                    },
+                                                    "birthdate":{
+                                                        "type": "string"
+                                                    },
+                                                    "email":{
+                                                        "type": "string"
+                                                    },
+                                                    "password":{
+                                                        "type": "string"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "examples": {
+                                    "success":{
+                                        "value":{
+                                            "meta":{
+                                                "message": "Register Success",
+                                                "status": "success",
+                                                "code": 200
+                                            },
+                                            "data":{
+                                                "name": "patient1",
+                                                "gender": "Perempuan",
+                                                "phone": "0895619258715",
+                                                "address": "link harum manis rt04/02 no 166 kel cirimekar kec.cibinong Kab.Bogor",
+                                                "nik": "3215646516543",
+                                                "birthdate": "15-09-1997",
+                                                "email": "patient@gmail.com",
+                                                "password": "12345678"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/login":{
+            "post":{
+                "tags": ["Users API"],
+                "description": "Login User Patient",
+                "summary": "Login User Patient",
+                "requestBody":{
+                    "description": "Input Data Login Patient",
+                    "content": {
+                        "application/json":{
+                            "schema":{
+                                "type": "object",
+                                "properties": {
+                                    "email":{
+                                        "type": "string"
+                                    },
+                                    "password":{
+                                        "type": "string"
+                                    }
+                                }
+                            },
+                            "example":{
+                                "email": "patient@gmail.com",
+                                "password": "12345678"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200":{
+                        "description": "Success Login Patient",
+                        "content": {
+                            "application/json":{
+                                "schema":{
+                                    "type": "object",
+                                    "properties": {
+                                        "meta":{
+                                            "$ref":"#/components/schemas/Meta"
+                                        },
+                                        "data": {
+                                            "type": "object",
+                                            "properties": {}
+                                        }
+                                    }
+                                },
+                                "examples":{
+                                    "success":{
+                                        "value":{
+                                            "meta":{
+                                                "message": "Get Success",
+                                                "status": "success",
+                                                "code": 200
+                                            },
+                                            "data":{
+                                                
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/teams":{
+            "get":{
+                "tags": ["Teams API"],
+                "description": "Get All Teams",
+                "summary": "Get All Teams",
+                "responses": {
+                    "200":{
+                        "description": "Success Get All Teams",
+                        "content": {
+                            "application/json":{
+                                "schema":{
+                                    "type": "object",
+                                    "properties": {
+                                        "meta":{
+                                            "$ref":"#/components/schemas/Meta"
+                                        },
+                                        "data":{
+                                            "type": "array",
+                                            "items":{
+                                                "type": "object",
+                                                "properties":{
+                                                    "id":{
+                                                        "type": "number"
+                                                    },
+                                                    "name":{
+                                                        "type": "string"
+                                                    },
+                                                    "description":{
+                                                        "type": "string"
+                                                    },
+                                                    "position":{
+                                                        "type": "string"
+                                                    },
+                                                    "url":{
+                                                        "type": "string"
+                                                    },
+                                                    "photo_team":{
+                                                        "type": "string"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "examples": {
+                                    "success":{
+                                        "value":{
+                                            "meta":{
+                                                "message":"Get Success",
+                                                "status":"success",
+                                                "code":200
+                                            },
+                                            "data":[
+                                                {
+                                                    "id": 1,
+                                                    "name": "Rifa Rahmalia. Amd.Ft",
+                                                    "description": "Education And Training Manager di Lembaga Vokasi Universitas Indonesia.  Lecturer University of Indonesia.  Senior Physiotherapist OM Active Clinic",
+                                                    "position": "therapist",
+                                                    "url": "https://id.linkedin.com/in/faizah-abdullah-24a332b3",
+                                                    "photo_team":"/images/feedbacks/comments-2.jpg"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post":{
+                "tags": ["Teams API"],
+                "description": "Create Team",
+                "summary": "Create Team",
+                "requestBody":{
+                    "description": "Input Data Team",
+                    "content": {
+                        "multipart/form-data":{
+                            "schema":{
+                                "type": "object",
+                                "properties": {
+                                    "name":{
+                                        "type": "string"
+                                    },
+                                    "position":{
+                                        "type": "string"
+                                    },
+                                    "url":{
+                                        "type": "string"
+                                    },
+                                    "desription":{
+                                        "type": "string"
+                                    }
+                                }
+                            },
+                            "example": {
+                                "name": "Rifa Rahmalia. Amd.Ft",
+                                "position": "therapist",
+                                "url": "https://id.linkedin.com/in/faizah-abdullah-24a332b3",
+                                "description": "Education And Training Manager di Lembaga Vokasi Universitas Indonesia.  Lecturer University of Indonesia.  Senior Physiotherapist OM Active Clinic"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200":{
+                        "description": "Success Create Team",
+                        "content": {
+                            "application/json":{
+                                "schema":{
+                                    "type": "object",
+                                    "properties": {
+                                        "meta":{
+                                            "$ref":"#/components/schemas/Meta"
+                                        },
+                                        "data":{
+                                            "type": "object",
+                                            "properties": {
+                                                "id":{
+                                                    "type": "integer"
+                                                },
+                                                "name":{
+                                                    "type": "string"
+                                                },
+                                                "position":{
+                                                    "type": "string"
+                                                },
+                                                "url":{
+                                                    "type": "string"
+                                                },
+                                                "description":{
+                                                    "type": "string"
+                                                },
+                                                "photo_team":{
+                                                    "type": "string"
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "examples": {
+                                    "success":{
+                                        "value":{
+                                            "meta":{
+                                                "message":"Create Success",
+                                                "status":"success",
+                                                "code":200
+                                            },
+                                            "data":{
+                                                "id": 1,
+                                                "name": "Rifa Rahmalia. Amd.Ft",
+                                                "position": "therapist",
+                                                "url": "https://id.linkedin.com/in/faizah-abdullah-24a332b3",
+                                                "description": "Education And Training Manager di Lembaga Vokasi Universitas Indonesia.  Lecturer University of Indonesia.  Senior Physiotherapist OM Active Clinic",
+                                                "photo_team":"/images/feedbacks/comments-2.jpg"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/services":{
+            "get":{
+                "tags": ["Services API"],
+                "description": "Get All Data Services",
+                "summary": "Get All Data Services",
+                "responses": {
+                    "200":{
+                        "description": "Success Get All Data Services",
+                        "content": {
+                            "application/json":{
+                                "schema":{
+                                    "type": "object",
+                                    "properties": {
+                                        "meta":{
+                                            "$ref": "#/components/schemas/Meta"
+                                        },
+                                        "data":{
+                                            "type": "array",
+                                            "items":{
+                                                "type": "object",
+                                                "properties": {
+                                                    "id":{
+                                                        "type":"number"
+                                                    },
+                                                    "image":{
+                                                        "type": "string"
+                                                    },
+                                                    "service_name":{
+                                                        "type": "string"
+                                                    },
+                                                    "description":{
+                                                        "type": "string"
+                                                    },
+                                                    "price":{
+                                                        "type": "number"
+                                                    },
+                                                    "discount":{
+                                                        "type": "number"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "examples": {
+                                    "success":{
+                                        "value":{
+                                            "meta":{
+                                                "message":"Get Success",
+                                                "status":"success",
+                                                "code":200
+                                            },
+                                            "data":[
+                                                {
+                                                    "id":1,
+                                                    "image": "/images/service/service3.png",
+                                                    "service_name": "Rifa Rahmalia",
+                                                    "description": "Treatment Fisioterapi reguler dengan 1x pertemuan.",
+                                                    "price": 450000,
+                                                    "discount": 0
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post":{
+                "tags": ["Services API"],
+                "description": "Create Data Service",
+                "summary": "Create Data Service",
+                "requestBody":{
+                    "description": "Input Data Service",
+                    "content": {
+                        "multipart/form-data":{
+                            "schema":{
+                                "type": "object",
+                                "properties": {
+                                    "kode_promo":{
+                                        "type": "integer"
+                                    },
+                                    "service_name":{
+                                        "type": "string"
+                                    },
+                                    "kuota_meet":{
+                                        "type": "integer"
+                                    },
+                                    "price":{
+                                        "type": "integer"
+                                    },
+                                    "image":{
+                                        "type": "string"
+                                    },
+                                    "description":{
+                                        "type": "string"
+                                    }
+                                }
+                            },
+                            "example": {
+                                "kode_promo":1,
+                                "service_name": "Product Gold",
+                                "kuota_name": 2,
+                                "price": 450000,
+                                "image": "/images/service/service3.png",
+                                "description": "Treatment Fisioterapi reguler dengan 1x pertemuan."
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200":{
+                        "description": "Success Create Service",
+                        "content": {
+                            "application/json":{
+                                "schema":{
+                                    "type": "object",
+                                    "properties": {
+                                        "meta":{
+                                            "$ref":"#/components/schemas/Meta"
+                                        },
+                                        "data":{
+                                            "type": "object",
+                                            "properties": {
+                                                "id":{
+                                                    "type":"number"
+                                                },
+                                                "image":{
+                                                    "type": "string"
+                                                },
+                                                "service_name":{
+                                                    "type": "string"
+                                                },
+                                                "description":{
+                                                    "type": "string"
+                                                },
+                                                "price":{
+                                                    "type": "number"
+                                                },
+                                                "discount":{
+                                                    "type": "number"
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "examples": {
+                                    "success":{
+                                        "value":{
+                                            "meta":{
+                                                "message":"Create Success",
+                                                "status":"success",
+                                                "code":200
+                                            },
+                                            "data":{
+                                                "id": 1,
+                                                "image": "/images/service/service3.png",
+                                                "service_name": "Product Gold",
+                                                "description": "Treatment Fisioterapi reguler dengan 1x pertemuan.",
+                                                "price": 450000,
+                                                "discount": 20
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/promo":{
+            "get":{
+                "tags": ["Promo API"],
+                "summary": "Get All Product is Promo",
+                "description": "Get All Product is Promo",
+                "responses": {
+                    "200":{
+                        "description": "Success Get All Promo",
+                        "content": {
+                            "application/json":{
+                                "schema":{
+                                    "type": "object",
+                                    "properties": {
+                                        "meta":{
+                                            "$ref":"#/components/schemas/Meta"
+                                        },
+                                        "data":{
+                                            "type": "array",
+                                            "items":{
+                                                "type": "object",
+                                                "properties": {
+                                                    "id":{
+                                                        "type":"number"
+                                                    },
+                                                    "image":{
+                                                        "type": "string"
+                                                    },
+                                                    "service_name":{
+                                                        "type": "string"
+                                                    },
+                                                    "discount":{
+                                                        "type": "number"
+                                                    },
+                                                    "description":{
+                                                        "type": "string"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "examples": {
+                                    "success":{
+                                        "value":{
+                                            "meta":{
+                                                "message":"Get Success",
+                                                "status":"success",
+                                                "code":200
+                                            },
+                                            "data":[
+                                                {
+                                                    "id": 1,
+                                                    "image": "/images/service/service3.png",
+                                                    "service_name": "Paket Platinum discount Kemerdekaan",
+                                                    "discount": 50,
+                                                    "description": "Education And Training Manager di Lembaga Vokasi Universitas Indonesia.  Lecturer University of Indonesia.  Senior Physiotherapist OM Active Clinic"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post":{
+                "tags": ["Promo API"],
+                "description": "Create Promo",
+                "summary": "Create Promo",
+                "requestBody":{
+                    "description": "Input Promo",
+                    "content": {
+                        "application/json":{
+                            "schema":{
+                                "type": "object",
+                                "properties": {
+                                    "discount":{
+                                        "type": "integer"
+                                    }
+                                }
+                            },
+                            "example":{
+                                "discount":20
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200":{
+                        "description": "Create Success",
+                        "content": {
+                            "application/json":{
+                                "schema":{
+                                    "type": "object",
+                                    "properties": {
+                                        "meta":{
+                                            "$ref":"#/components/schemas/Meta"
+                                        },
+                                        "data":{
+                                            "type": "object",
+                                            "properties": {
+                                                "id":{
+                                                    "type": "integer"
+                                                },
+                                                "discount":{
+                                                    "type": "integer"
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "examples": {
+                                    "success":{
+                                        "value":{
+                                            "meta":{
+                                                "message":"Create Success",
+                                                "status":"success",
+                                                "code":200
+                                            },
+                                            "data":{
+                                                "id": 1,
+                                                "discount": 20
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/testimonial":{
+            "get":{
+                "tags": ["Testimonial API"],
+                "summary": "Get All Data Testimonial",
+                "description": "Get All Data Testimonial",
+                "responses": {
+                    "200":{
+                        "description": "Success Get All Data",
+                        "content": {
+                            "application/json":{
+                                "schema":{
+                                    "type": "object",
+                                    "properties": {
+                                        "meta":{
+                                            "$ref":"#/components/schemas/Meta"
+                                        },
+                                        "data":{
+                                            "type": "array",
+                                            "items":{
+                                                "type": "object",
+                                                "properties": {
+                                                    "id":{
+                                                        "type": "number"
+                                                    },
+                                                    "photo_user":{
+                                                        "type": "string"
+                                                    },
+                                                    "name":{
+                                                        "type": "string"
+                                                    },
+                                                    "content":{
+                                                        "type": "string"
+                                                    },
+                                                    "email":{
+                                                        "type": "string"
+                                                    },
+                                                    "occupation":{
+                                                        "type": "string"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "examples": {
+                                    "success":{
+                                        "value":{
+                                            "meta":{
+                                                "message":"Get Success",
+                                                "status":"success",
+                                                "code":200
+                                            },
+                                            "data":[
+                                                {
+                                                    "id": 1,
+                                                    "photo_user": "/images/feedbacks/comments-2.jpg",
+                                                    "name": "Client1",
+                                                    "content": "Getfit With Physio Sangat Membantu saya dengan segala keluhan fisik saya. Terima kasih Getfit",
+                                                    "email": "clien1@gmail.com",
+                                                    "occupation": "Programmer"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post":{
+                "tags": ["Testimonial API"],
+                "summary": "Create Testimonial",
+                "description": "Create Testimonial",
+                "requestBody":{
+                    "description": "Input Content Testimonial",
+                    "content": {
+                        "application/json":{
+                            "schema":{
+                                "type": "object",
+                                "properties": {
+                                    "content":{
+                                        "type": "string"
+                                    }
+                                }
+                            },
+                            "example":{
+                                "content":"Terimakasih"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200":{
+                        "description": "Create Success",
+                        "content": {
+                            "application/json":{
+                                "schema":{
+                                    "type": "object",
+                                    "properties": {
+                                        "meta":{
+                                            "$ref":"#/components/schemas/Meta"
+                                        },
+                                        "data":{
+                                            "type": "object",
+                                            "properties": {
+                                                "id":{
+                                                    "type": "integer"
+                                                },
+                                                "photo_user":{
+                                                    "type": "string"
+                                                },
+                                                "name":{
+                                                    "type": "string"
+                                                },
+                                                "content":{
+                                                    "type": "string"
+                                                },
+                                                "email":{
+                                                    "type": "string"
+                                                },
+                                                "occupation":{
+                                                    "type": "string"
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "examples": {
+                                    "success":{
+                                        "value":{
+                                            "meta":{
+                                                "message":"Create Success",
+                                                "status":"success",
+                                                "code":200
+                                            },
+                                            "data":{
+                                                "id": 1,
+                                                "photo_user": "/images/feedbacks/comments-2.jpg",
+                                                "name": "Client1",
+                                                "content": "Getfit With Physio Sangat Membantu saya dengan segala keluhan fisik saya. Terima kasih Getfit",
+                                                "email": "clien1@gmail.com",
+                                                "occupation": "Programmer"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/galeries":{
+            "get":{
+                "tags": ["Galeries API"],
+                "description": "Get All Gallery",
+                "summary": "Get All Gallery",
+                "responses": {
+                    "200":{
+                        "description": "Success Get All Gallery",
+                        "content": {
+                            "application/json":{
+                                "schema":{
+                                    "type": "object",
+                                    "properties": {
+                                        "meta":{
+                                            "$ref":"#/components/schemas/Meta"
+                                        },
+                                        "data":{
+                                            "type": "array",
+                                            "items":{
+                                                "type": "object",
+                                                "properties": {
+                                                    "id":{
+                                                        "type": "number"
+                                                    },
+                                                    "photo":{
+                                                        "type": "string"
+                                                    },
+                                                    "caption":{
+                                                        "type": "string"
+                                                    },
+                                                    "sub_caption":{
+                                                        "type": "string"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "examples": {
+                                    "success":{
+                                        "value":{
+                                            "meta":{
+                                                "message":"Get Success",
+                                                "status":"success",
+                                                "code":200
+                                            },
+                                            "data":[
+                                                {
+                                                    "id": 1,
+                                                    "photo": "/images/galleries/1.jpg",
+                                                    "caption": "Ruang Klinik SIMC",
+                                                    "sub_caption": "Event 2021 dengan sejuta keseruan."
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post":{
+                "tags": ["Galeries API"],
+                "summary": "Create Galery",
+                "description": "Create Galery",
+                "requestBody":{
+                    "description": "Input Galery",
+                    "content": {
+                        "multipart/form-data":{
+                            "schema":{
+                                "type": "object",
+                                "properties": {
+                                    "photo":{
+                                        "type": "string"
+                                    },
+                                    "caption":{
+                                        "type": "string"
+                                    },
+                                    "sub_caption":{
+                                        "type": "string"
+                                    }
+                                }
+                            },
+                            "example": {
+                                "photo": "/images/galleries/1.jpg",
+                                "caption": "Ruang Klinik SIMC",
+                                "sub_caption": "Event 2021 dengan sejuta keseruan."
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200":{
+                        "description": "Success Create Galery",
+                        "content": {
+                            "application/json":{
+                                "schema":{
+                                    "type": "object",
+                                    "properties": {
+                                        "meta":{
+                                            "$ref":"#/components/schemas/Meta"
+                                        },
+                                        "data":{
+                                            "type": "object",
+                                            "properties": {
+                                                "id":{
+                                                    "type": "integer"
+                                                },
+                                                "photo":{
+                                                    "type": "string"
+                                                },
+                                                "caption":{
+                                                    "type": "string"
+                                                },
+                                                "sub_caption":{
+                                                    "type": "string"
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "examples": {
+                                    "success":{
+                                        "value":{
+                                            "meta":{
+                                                "message":"Upload Photo Success",
+                                                "status":"success",
+                                                "code":200
+                                            },
+                                            "data":{
+                                                "id": 1,
+                                                "photo": "/images/galleries/1.jpg",
+                                                "caption": "Ruang Klinik SIMC",
+                                                "sub_caption": "Event 2021 dengan sejuta keseruan."
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/patients":{
+            "get":{
+                "tags": ["Patients API"],
+                "description": "Get All Patients",
+                "summary": "Get All Patients",
+                "responses": {
+                    "200":{
+                        "description": "Succeess Get All Patient",
+                        "content": {
+                            "application/json":{
+                                "schema":{
+                                    "type": "object",
+                                    "properties": {
+                                        "meta":{
+                                            "$ref": "#/components/schemas/Meta"
+                                        },
+                                        "data":{
+                                            "type": "array",
+                                            "items":{
+                                                "type": "object",
+                                                "properties": {
+                                                    "id":{
+                                                        "type": "integer"
+                                                    },
+                                                    "name":{
+                                                        "type": "string"
+                                                    },
+                                                    "gender":{
+                                                        "type": "string"
+                                                    },
+                                                    "photo":{
+                                                        "type": "string"
+                                                    },
+                                                    "phone":{
+                                                        "type": "string"
+                                                    },
+                                                    "address":{
+                                                        "type": "string"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "examples": {
+                                    "success":{
+                                        "value":{
+                                            "meta":{
+                                                "message":"Get Success",
+                                                "status":"success",
+                                                "code":200
+                                            },
+                                            "data":[
+                                                {
+                                                    "id": 1,
+                                                    "name": "patient1",
+                                                    "gender": "Perempuan",
+                                                    "photo": "/imges/patient.jpg",
+                                                    "phone": "0895619258715",
+                                                    "address": "link harum manis rt04/02 no 166 kel cirimekar kec.cibinong Kab.Bogor"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post":{
+                "tags": ["Patients API"],
+                "description": "Create Patient",
+                "summary": "Create Patient",
+                "requestBody":{
+                    "description": "Create Data Patient",
+                    "content": {
+                        "application/json":{
+                            "schema":{
+                                "type": "object",
+                                "properties": {
+                                    "name" :{
+                                        "type": "string"
+                                    },
+                                    "gender":{
+                                        "type": "string"
+                                    },
+                                    "phone":{
+                                        "type": "string"
+                                    },
+                                    "address":{
+                                        "type": "string"
+                                    },
+                                    "nik":{
+                                        "type": "string"
+                                    },
+                                    "birthdate":{
+                                        "type": "string"
+                                    },
+                                    "email":{
+                                        "type": "string"
+                                    },
+                                    "password":{
+                                        "type": "string"
+                                    }
+                                }
+                            },
+                            "example":{
+                                "name": "patient1",
+                                "gender": "Perempuan",
+                                "phone": "0895619258715",
+                                "address": "link harum manis rt04/02 no 166 kel cirimekar kec.cibinong Kab.Bogor",
+                                "nik": "3215646516543",
+                                "birthdate": "15-09-1997",
+                                "email": "patient@gmail.com",
+                                "password": "12345678"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200":{
+                        "description": "Success Create Patient",
+                        "content": {
+                            "application/json":{
+                                "schema":{
+                                    "type": "object",
+                                    "properties": {
+                                        "meta":{
+                                            "$ref":"#/components/schemas/Meta"
+                                        },
+                                        "data":{
+                                            "type": "array",
+                                            "items":{
+                                                "type": "object",
+                                                "properties": {
+                                                    "name":{
+                                                        "type": "string"
+                                                    },
+                                                    "gender":{
+                                                        "type":"string"
+                                                    },
+                                                    "phone":{
+                                                        "type": "string"
+                                                    },
+                                                    "address":{
+                                                        "type": "string"
+                                                    },
+                                                    "nik":{
+                                                        "type": "string"   
+                                                    },
+                                                    "birthdate":{
+                                                        "type": "string"
+                                                    },
+                                                    "email":{
+                                                        "type": "string"
+                                                    },
+                                                    "password":{
+                                                        "type": "string"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "examples": {
+                                    "success":{
+                                        "value":{
+                                            "meta":{
+                                                "message": "Create Success",
+                                                "status": "success",
+                                                "code": 200
+                                            },
+                                            "data":{
+                                                "name": "patient1",
+                                                "gender": "Perempuan",
+                                                "phone": "0895619258715",
+                                                "address": "link harum manis rt04/02 no 166 kel cirimekar kec.cibinong Kab.Bogor",
+                                                "nik": "3215646516543",
+                                                "birthdate": "15-09-1997",
+                                                "email": "patient@gmail.com",
+                                                "password": "12345678"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/patient/{patientId}":{
+            "get":{
+                "tags": ["Patients API"],
+                "description": "Detail Patient",
+                "summary": "Detail Patient",
+                "parameters": [
+                    {
+                        "description": "Patient Id",
+                        "required": true,
+                        "in": "path",
+                        "name": "patientId"
+                    }
+                ],
+                "responses": {
+                    "200":{
+                        "description": "Success Get Detail Patient",
+                        "content": {
+                            "application/json":{
+                                "schema":{
+                                    "type": "object",
+                                    "properties": {
+                                        "meta":{
+                                            "$ref":"#/components/schemas/Meta"
+                                        },
+                                        "data":{
+                                            "type": "object",
+                                            "properties": {
+                                                "id":{
+                                                    "type": "integer"
+                                                },
+                                                "name":{
+                                                    "type": "string"
+                                                },
+                                                "gender":{
+                                                    "type": "string"
+                                                },
+                                                "photo":{
+                                                    "type": "string"
+                                                },
+                                                "phone":{
+                                                    "type": "string"
+                                                },
+                                                "address":{
+                                                    "type": "string"
+                                                },
+                                                "nik":{
+                                                    "type": "string"
+                                                },
+                                                "birthdate":{
+                                                    "type": "string"
+                                                },
+                                                "email":{
+                                                    "type": "string"
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "examples":{
+                                    "success":{
+                                        "value":{
+                                            "meta":{
+                                                "message": "Get Success",
+                                                "status": "success",
+                                                "code": 200
+                                            },
+                                            "data":{
+                                                "id": 1,
+                                                "name": "patient1",
+                                                "gender": "Perempuan",
+                                                "photo": "/images/patient.jpg",
+                                                "phone": "0895619258715",
+                                                "address": "link harum manis rt04/02 no 166 kel cirimekar kec.cibinong Kab.Bogor",
+                                                "nik": "3215646516543",
+                                                "birthdate": "15-09-1997",
+                                                "email": "patient@gmail.com"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/transactions":{
+            "get":{
+                "tags": ["Transactions API"],
+                "summary": "Get All Transactions",
+                "description": "Get All Transactions",
+                "responses": {
+                    "200":{
+                        "description": "Success Get All Transactions",
+                        "content": {
+                            "application/json":{
+                                "schema":{
+                                    "type": "object",
+                                    "properties": {
+                                        "meta":{
+                                            "$ref":"#/components/schemas/Meta"
+                                        },
+                                        "data":{
+                                            "type": "array",
+                                            "items":{
+                                                "type": "object",
+                                                "properties": {
+                                                    "id":{
+                                                        "type": "integer"
+                                                    },
+                                                    "name":{
+                                                        "type": "string"
+                                                    },
+                                                    "gender":{
+                                                        "type": "string"
+                                                    },
+                                                    "phone":{
+                                                        "type": "string"
+                                                    },
+                                                    "address":{
+                                                        "type": "string"
+                                                    },
+                                                    "status":{
+                                                        "type": "string"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "examples": {
+                                    "success":{
+                                        "value":{
+                                            "meta":{
+                                                "message":"Get Success",
+                                                "status":"success",
+                                                "code":200
+                                            },
+                                            "data":[
+                                                {
+                                                    "id": 1,
+                                                    "name": "patient1",
+                                                    "gender": "Perempuan",
+                                                    "phone": "0895619258715",
+                                                    "address": "link harum manis rt04/02 no 166 kel cirimekar kec.cibinong Kab.Bogor",
+                                                    "status": "Menunggu Pembayaran"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/transactions/{serviceId}":{
+            "post":{
+                "tags": ["Transactions API"],
+                "summary": "Create Transaction",
+                "description": "Create Transaction",
+                "parameters": [
+                    {
+                        "description": "Service Id",
+                        "required": true,
+                        "in": "path",
+                        "name": "serviceId"
+                    }
+                ],
+                "responses": {
+                    "200":{
+                        "description": "Success Transaction",
+                        "content": {
+                            "application/json":{
+                                "schema":{
+                                    "type": "object",
+                                    "properties": {
+                                        "meta":{
+                                            "$ref":"#/components/schemas/Meta"
+                                        },
+                                        "data":{
+                                            "type": "object",
+                                            "properties": {
+                                                "id":{
+                                                    "type": "integer"
+                                                },
+                                                "id_user":{
+                                                    "type": "integer"
+                                                },
+                                                "id_service":{
+                                                    "type": "integer"
+                                                },
+                                                "name":{
+                                                    "type": "string"
+                                                },
+                                                "service_name":{
+                                                    "type": "string"
+                                                },
+                                                "code":{
+                                                    "type": "string"
+                                                },
+                                                "amount":{
+                                                    "type": "number"
+                                                },
+                                                "status":{
+                                                    "type": "string"
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "examples": {
+                                    "success":{
+                                        "value":{
+                                            "meta":{
+                                                "message": "Transaction Success",
+                                                "status": "success",
+                                                "code": 200
+                                            },
+                                            "data":{
+                                                "id": 1,
+                                                "id_user": 1,
+                                                "id_service": 1,
+                                                "name":"Abdul",
+                                                "service_name":"Product Gold",
+                                                "code":"A1",
+                                                "amount":2000000,
+                                                "status":"pending"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/appointments":{
+            "get":{
+                "tags": ["Appointment API"],
+                "description": "Get All Appointment",
+                "summary": "Get All Appointment",
+                "responses": {
+                    "200":{
+                        "description": "Success Get All Appointment",
+                        "content": {
+                            "application/json":{
+                                "schema":{
+                                    "type": "object",
+                                    "properties": {
+                                        "meta":{
+                                            "$ref":"#/components/schemas/Meta"
+                                        },
+                                        "data":{
+                                            "type": "array",
+                                            "items":{
+                                                "type": "object",
+                                                "properties": {
+                                                    "id":{
+                                                        "type": "integer"
+                                                    },
+                                                    "name":{
+                                                        "type": "string"
+                                                    },
+                                                    "appointment_date":{
+                                                        "type": "string"
+                                                    },
+                                                    "gender":{
+                                                        "type": "string"
+                                                    },
+                                                    "address":{
+                                                        "type": "string"
+                                                    },
+                                                    "photo":{
+                                                        "type": "string"
+                                                    },
+                                                    "phone":{
+                                                        "type": "string"
+                                                    },
+                                                    "status":{
+                                                        "type": "string"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "examples": {
+                                    "success":{
+                                        "value":{
+                                            "meta":{
+                                                "message":"Get Success",
+                                                "status":"success",
+                                                "code":200
+                                            },
+                                            "data":[
+                                                {
+                                                    "id": 1,
+                                                    "name": "patient1",
+                                                    "appointmentDate": "10-09-2021",
+                                                    "gender": "Perempuan",
+                                                    "address": "20150651325462",
+                                                    "photo": "/images/patient.jpg",
+                                                    "phone": "0895619258715",
+                                                    "status": "Menunggu Konfirmasi"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/appointments/{serviceId}":{
+            "post":{
+                "tags": ["Appointment API"],
+                "summary": "Create Appointment",
+                "description": "Create Appointment",
+                "parameters": [
+                    {
+                        "description": "Service Id",
+                        "required": true,
+                        "in": "path",
+                        "name": "serviceId"
+                    }
+                ],
+                "requestBody":{
+                    "description": "Input Appointment",
+                    "content": {
+                        "application/json":{
+                            "schema":{
+                                "type": "object",
+                                "properties": {
+                                    "appointment_date":{
+                                        "type": "string"
+                                    },
+                                    "description":{
+                                        "type": "string"
+                                    }
+                                }
+                            },
+                            "example":{
+                                "appointment_date": "10-09-2021 15:00:00",
+                                "description": "Saya mengalami Sakit Pinggang"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200":{
+                        "description": "Create Appointment Success",
+                        "content": {
+                            "application/json":{
+                                "schema":{
+                                    "type": "object",
+                                    "properties": {
+                                        "meta":{
+                                            "$ref":"#/components/schemas/Meta"
+                                        },
+                                        "data":{
+                                            "type": "object",
+                                            "properties": {
+                                                "id":{
+                                                    "type": "integer"
+                                                },
+                                                "name":{
+                                                    "type": "string"
+                                                },
+                                                "appointment_date":{
+                                                    "type": "string"
+                                                },
+                                                "product":{
+                                                    "type": "string"
+                                                },
+                                                "gender":{
+                                                    "type": "string"
+                                                },
+                                                "address":{
+                                                    "type": "string"
+                                                },
+                                                "photo":{
+                                                    "type": "string"
+                                                },
+                                                "phone":{
+                                                    "type": "string"
+                                                },
+                                                "description":{
+                                                    "type": "string"
+                                                },
+                                                "status":{
+                                                    "type": "string"
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "examples": {
+                                    "success":{
+                                        "value":{
+                                            "meta":{
+                                                "meta":{
+                                                    "message": "Create Success",
+                                                    "status": "success",
+                                                    "code": 200
+                                                },
+                                                "data":{
+                                                    "id": 1,
+                                                    "name": "patient1",
+                                                    "appointmentDate": "10-09-2021",
+                                                    "product": "namapaket",
+                                                    "gender": "Perempuan",
+                                                    "address": "20150651325462",
+                                                    "photo": "/images/patient.jpg",
+                                                    "phone": "0895619258715",
+                                                    "description": "Saya mengalami Sakit Pinggang",
+                                                    "status": "Menunggu Konfirmasi"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/appointments/{appointmentId}":{
+            "get":{
+                "tags": ["Appointment API"],
+                "description": "Detail Appointment",
+                "summary": "Detail Appointment",
+                "parameters": [
+                    {
+                        "description": "Appointment Id",
+                        "required": true,
+                        "in": "path",
+                        "name": "appointmentId"
+                    }
+                ],
+                "responses": {
+                    "200":{
+                        "description": "Detail Appointment Success",
+                        "content": {
+                            "application/json":{
+                                "schema":{
+                                    "type": "object",
+                                    "properties": {
+                                        "meta":{
+                                            "$ref":"#/components/schemas/Meta"
+                                        },
+                                        "data":{
+                                            "type": "object",
+                                            "properties": {
+                                                "id":{
+                                                    "type": "integer"
+                                                },
+                                                "name":{
+                                                    "type": "string"
+                                                },
+                                                "appointment_date":{
+                                                    "type": "string"
+                                                },
+                                                "product":{
+                                                    "type": "string"
+                                                },
+                                                "gender":{
+                                                    "type": "string"
+                                                },
+                                                "address":{
+                                                    "type": "string"
+                                                },
+                                                "photo":{
+                                                    "type": "string"
+                                                },
+                                                "phone":{
+                                                    "type": "string"
+                                                },
+                                                "description":{
+                                                    "type": "string"
+                                                },
+                                                "status":{
+                                                    "type": "string"
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "examples": {
+                                    "success":{
+                                        "value":{
+                                            "meta":{
+                                                "meta":{
+                                                    "message": "Get Success",
+                                                    "status": "success",
+                                                    "code": 200
+                                                },
+                                                "data":{
+                                                    "id": 1,
+                                                    "name": "patient1",
+                                                    "appointmentDate": "10-09-2021",
+                                                    "product": "namapaket",
+                                                    "gender": "Perempuan",
+                                                    "address": "20150651325462",
+                                                    "photo": "/images/patient.jpg",
+                                                    "phone": "0895619258715",
+                                                    "description": "Saya mengalami Sakit Pinggang",
+                                                    "status": "Menunggu Konfirmasi"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "Meta":{
+                "type": "object",
+                "properties": {
+                    "message":{
+                        "type": "string"
+                    },
+                    "status":{
+                        "type": "string"
+                    },
+                    "code":{
+                        "type": "number"
+                    }
+                }
+            }
+        }
+    }
+}

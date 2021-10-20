@@ -1,0 +1,9 @@
+{
+  "addPatientpost": {
+    "image": "/images/service/service3.png",
+    "service_name": "Rifa Rahmalia",
+    "description": "Treatment Fisioterapi reguler dengan 1x pertemuan.",
+    "price": 450000,
+    "discount": 0
+  }
+}

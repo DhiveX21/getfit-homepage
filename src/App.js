@@ -11,6 +11,10 @@ import AdminDashboard from "pages/admin/Dashboard";
 import AdminListPatient from "pages/admin/ListPatient";
 import AdminListAppointment from "pages/admin/ListAppointment";
 import AdminListOrder from "pages/admin/ListOrder";
+import AdminListService from "pages/admin/ListService";
+import AdminListTeam from "pages/admin/ListTeam";
+import AdminListPromo from "pages/admin/ListPromo";
+import PatientDashboard from "pages/patient/Dashboard";
 // import "assets/scss/style.scss";
 import "assets/index.css";
 
@@ -28,6 +32,10 @@ function App() {
         <Route path="/admin/listPatient" component={AdminListPatient} />
         <Route path="/admin/listAppointment" component={AdminListAppointment} />
         <Route path="/admin/listOrder" component={AdminListOrder} />
+        <Route path="/admin/listService" component={AdminListService} />
+        <Route path="/admin/listTeam" component={AdminListTeam} />
+        <Route path="/admin/listPromo" component={AdminListPromo} />
+        <Route path="/patient/dashboard" component={PatientDashboard} />
       </Router>
     </div>
   );

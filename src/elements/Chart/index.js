@@ -82,7 +82,6 @@ export default class Chart extends Component {
     }
 
     if (this.state.type === "pie") {
-      console.log(this.state.labels);
       const data = {
         labels: this.state.dataLabel,
         datasets: [

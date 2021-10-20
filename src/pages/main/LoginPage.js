@@ -8,7 +8,7 @@ export default class LoginPage extends Component {
   render() {
     return (
       <>
-        <Header position="absolute"></Header>
+        <Header position="relative"></Header>
         <Login></Login>
         <Footer data={api.footer}></Footer>
       </>

@@ -9,7 +9,7 @@ import Promo from "parts/main/Promo";
 import Galery from "parts/main/Galery";
 import Footer from "parts/main/Footer";
 import VideoOpening from "parts/main/VideoOpening";
-import StickyMenu from "parts/main/LandingPage/StickyMenu";
+import StickyMenu from "parts/main/StickyMenu";
 import api from "api/api.json";
 
 export default class LandingPage extends Component {

@@ -8,7 +8,7 @@ export default class RegistrationPage extends Component {
   render() {
     return (
       <>
-        <Header position="absolute"></Header>
+        <Header position="relative"></Header>
         <Register></Register>
         <Footer data={api.footer}></Footer>
       </>

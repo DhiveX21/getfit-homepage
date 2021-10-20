@@ -8,7 +8,7 @@ import Achievement from "parts/main/AboutUs/Achievement";
 import Client from "parts/main/Client";
 import Team from "parts/main/Team";
 import TestimonialLine from "parts/main/TestimonialLine";
-import StickyMenu from "parts/main/LandingPage/StickyMenu";
+import StickyMenu from "parts/main/StickyMenu";
 import api from "api/api.json";
 
 export default class AboutUs extends Component {
