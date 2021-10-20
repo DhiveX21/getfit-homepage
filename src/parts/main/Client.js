@@ -11,7 +11,7 @@ export default function Client(props) {
   const feedbackContent = props.data.map((item, key) => (
     <div className="flex flex-col" key={key}>
       <div className={switchActive === key ? "" : " hidden"}>
-        <div className="mb-6 px-72">
+        <div className="mb-6 lg:px-72">
           <q className="text-pink font-bold text-7xl ">
             <span className="text-gray-700 text-lg font-light">
               {item.content}

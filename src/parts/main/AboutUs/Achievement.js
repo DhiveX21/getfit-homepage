@@ -3,7 +3,7 @@ import SectionTitle from "elements/SectionTitle";
 
 export default function Achievement() {
   return (
-    <section className="h-screen md:h-auto mb-20 ">
+    <section className=" md:h-auto mb-20 ">
       <SectionTitle preTitle="Our Proud" Title="Achievement" />
       <div className="flex flex-col px-5 md:flex-row lg:px-40">
         <img
