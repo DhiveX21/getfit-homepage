@@ -1,8 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import SectionTitle from "elements/SectionTitle";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function Client(props) {
   const [switchActive, setswitchActive] = useState(1);
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      easing: "ease-in-out-quart",
+    });
+  }, []);
 
   const toggleActive = (index) => {
     setswitchActive(index);
@@ -12,7 +21,7 @@ export default function Client(props) {
     <div className="flex flex-col" key={key}>
       <div className={switchActive === key ? "" : " hidden"}>
         <div className="mb-6 lg:px-72">
-          <q className="text-pink font-bold text-7xl ">
+          <q className="text-pink font-bold text-3xl ">
             <span className="text-gray-700 text-lg font-light">
               {item.content}
             </span>
@@ -47,8 +56,12 @@ export default function Client(props) {
     <section>
       <div className="flex flex-col text-center ">
         <SectionTitle preTitle="What Our" Title="Client Say?"></SectionTitle>
-        <div className="flex justify-center mb-6">{feedbackContent}</div>
-        <div className="flex justify-center">{feedbackPhoto}</div>
+        <div className="flex justify-center mb-6" data-aos="fade-up">
+          {feedbackContent}
+        </div>
+        <div className="flex justify-center" data-aos="fade-up">
+          {feedbackPhoto}
+        </div>
       </div>
     </section>
   );

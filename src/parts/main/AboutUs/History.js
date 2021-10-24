@@ -1,13 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
 import SectionTitle from "elements/SectionTitle";
 import "assets/index.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function History(props) {
+  useEffect(() => {
+    AOS.init({
+      duration: 500,
+      easing: "ease-in-out-quart",
+    });
+  }, []);
   return (
     <section className="mb-20">
       <SectionTitle preTitle="Our Precious" Title="History" />
 
-      <div className=" flex justify-center">
+      <div className=" flex justify-center" data-aos="fade-down">
         <div className="w-full px-2 lg:w-3/4">
           <div className="flex flex-col md:grid grid-cols-9 mx-auto p-2 text-pink-50">
             {/* <!-- left --> */}

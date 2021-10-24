@@ -1,10 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import SectionTitle from "elements/SectionTitle";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function Galery(props) {
+  useEffect(() => {
+    AOS.init({
+      duration: 500,
+      easing: "ease-in-out-quart",
+    });
+  }, []);
+
   const photoList = props.data.map((item, index) => (
     <div key={index}>
       <div
+        data-aos="fade-up"
         className={[
           "relative  overflow-hidden ring-4 ring-pink rounded-3xl",
           index === 0 ? "col-span-2 md:row-span-2" : "",

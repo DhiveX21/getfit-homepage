@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import ImageTeam from "assets/images/founder.jpeg";
 import SectionTitle from "elements/SectionTitle";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -42,6 +44,12 @@ const responsive = {
 };
 
 export default function Team(props) {
+  useEffect(() => {
+    AOS.init({
+      duration: 500,
+      easing: "ease-in-out-quart",
+    });
+  }, []);
   const carouselTeamData = props.data.map((item, index) => (
     // <div className="container-carousel mb-4">
     //   <div className="card">
@@ -97,25 +105,25 @@ export default function Team(props) {
   return (
     <section className="team mb-20">
       <SectionTitle preTitle="Our Hardworking" Title="Team" />
-      <div className="">
+      <div className="" data-aos="fade-up">
         <Carousel
           swipeable={true}
-          draggable={false}
+          draggable={true}
           showDots={true}
           responsive={responsive}
           ssr={true} // means to render carousel on server-side.
           infinite={true}
-          autoPlay={false}
-          autoPlaySpeed={1000}
+          autoPlay={true}
+          autoPlaySpeed={3000}
           keyBoardControl={true}
           // customTransition="all .5"
-          transitionDuration={300}
+          transitionDuration={500}
           containerclassName="carousel-container"
           removeArrowOnDeviceType={["tablet", "mobile"]}
           deviceType={""}
           dotListclassName="custom-dot-list-style"
           itemclassName="carousel-item-padding-40-px"
-          customTransition="transform 100ms ease-in-out"
+          customTransition="transform 500ms ease-in-out"
         >
           {carouselTeamData}
         </Carousel>

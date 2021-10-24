@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useEffect } from "react";
 import Hero from "parts/main/LandingPage/Hero";
 import Founder from "parts/main/LandingPage/Founder";
 import Team from "parts/main/Team";
@@ -12,22 +12,20 @@ import VideoOpening from "parts/main/VideoOpening";
 import StickyMenu from "parts/main/StickyMenu";
 import api from "api/api.json";
 
-export default class LandingPage extends Component {
-  render() {
-    return (
-      <>
-        <StickyMenu></StickyMenu>
-        <Header position="absolute"></Header>
-        <Hero data={api.hero}></Hero>
-        <VideoOpening data={api.videoOpening}></VideoOpening>
-        <Founder data={api.founder}></Founder>
-        <Galery data={api.galleries}></Galery>
-        <Service data={api.services}></Service>
-        <TestimonialLine></TestimonialLine>
-        <Team data={api.team}></Team>
-        <Promo data={api.promo}></Promo>
-        <Footer data={api.footer}></Footer>
-      </>
-    );
-  }
+export default function LandingPage() {
+  return (
+    <>
+      <StickyMenu></StickyMenu>
+      <Header position="absolute"></Header>
+      <Hero data={api.hero}></Hero>
+      <VideoOpening data={api.videoOpening}></VideoOpening>
+      <Founder data={api.founder}></Founder>
+      <Galery data={api.galleries}></Galery>
+      <Service data={api.services}></Service>
+      <TestimonialLine></TestimonialLine>
+      <Team data={api.team}></Team>
+      <Promo data={api.promo}></Promo>
+      <Footer data={api.footer}></Footer>
+    </>
+  );
 }

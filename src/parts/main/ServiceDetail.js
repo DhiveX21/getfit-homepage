@@ -1,11 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import Button from "elements/Button";
 import SectionTitle from "elements/SectionTitle";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 import "react-multi-carousel/lib/styles.css";
 
 export default function ServiceDetail(props) {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      easing: "ease-in-out-quart",
+    });
+  }, []);
   function number_format(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
   }
@@ -14,7 +22,7 @@ export default function ServiceDetail(props) {
     <section className="service px-5 lg:px-10 mb-20 md:mb-40">
       <SectionTitle preTitle="Our Excelent" Title="Service" />
 
-      <div className="w-full mt-8 mb-16">
+      <div className="w-full mt-8 mb-16" data-aos="fade-up">
         <div className="flex flex-col gap-8 justify-center items-center w-full lg:grid lg:grid-cols-3 lg:gap-8">
           {props.data.map((item, index) => {
             const discount_display = item.discount === 0 ? "hidden" : "";

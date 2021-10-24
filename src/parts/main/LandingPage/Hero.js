@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import ImageHero from "assets/images/hero.png";
 import Button from "elements/Button";

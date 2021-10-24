@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import SectionTitle from "elements/SectionTitle";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function Promo(props) {
+  useEffect(() => {
+    AOS.init({
+      duration: 500,
+      easing: "ease-in-out-quart",
+    });
+  }, []);
   const promo_list = props.data.map((item, index) => (
     <div className="group promo mb-24" key={index}>
       <div className="card-promo w-full h-full rounded-3xl bg-white shadow-lg flex content-center items-center flex-col relative mb-20 lg:mb-0 hover:bg-pink hover:text-white">
@@ -38,7 +46,10 @@ export default function Promo(props) {
   return (
     <section className="promo-section p-5 m-0 box-border">
       <SectionTitle preTitle="Our Limited" Title="Promo" />
-      <div className="list-promo md:grid md:grid-cols-2 md:gap-8 lg:grid-cols-3 lg:gap-8 lg:mx-32">
+      <div
+        className="list-promo md:grid md:grid-cols-2 md:gap-8 lg:grid-cols-3 lg:gap-8 lg:mx-32"
+        data-aos="fade-down"
+      >
         {promo_list}
       </div>
     </section>
