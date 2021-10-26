@@ -17,7 +17,7 @@ export default function Promo(props) {
           <img
             src={item.image}
             alt={item.name}
-            className="transform-gpu border-4 border-white rounded-4xl group-hover:transition duration-300  group-hover:-translate-y-24"
+            className="transform-gpu h-80 border-4 border-white rounded-4xl group-hover:transition duration-300  group-hover:-translate-y-24"
           ></img>
         </div>
         <div className="desc transform-gpu  bg-white text-pink absolute text-center grid grid-cols-1 w-full p-6 pb-8 h-2/4 lg:p-3 opacity-0 group-hover:transition duration-300 group-hover:opacity-100 group-hover:translate-y-3/4 md:group-hover:translate-y-2/4 lg:group-hover:translate-y-3/4">

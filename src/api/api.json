@@ -49,7 +49,7 @@
   "services": [
     {
       "service_id": 1,
-      "image": "/images/service/service3.png",
+      "image": "/images/service/service1.png",
       "service_name": "Rifa Rahmalia",
       "description": "Treatment Fisioterapi reguler dengan 1x pertemuan.",
       "url": "https://id.linkedin.com/in/faizah-abdullah-24a332b3",
@@ -58,7 +58,7 @@
     },
     {
       "service_id": 2,
-      "image": "/images/service/service1.png",
+      "image": "/images/service/service2.png",
       "service_name": "Rifa Rahmalia",
       "description": "Paket Fisioterapi Silver dengan 3x pertemuan , Berupa Treatment Home Visit / On Clinic Sesuai Hari yang anda tentukan.",
       "url": "https://id.linkedin.com/in/faizah-abdullah-24a332b3",
@@ -67,7 +67,7 @@
     },
     {
       "service_id": 3,
-      "image": "/images/service/service2.png",
+      "image": "/images/service/service3.png",
       "service_name": "Rifa Rahmalia",
       "description": "Paket Fisioterapi Gold dengan 6x pertemuan , Berupa Treatment Home Visit / On Clinic Sesuai Hari yang anda tentukan.",
       "url": "https://id.linkedin.com/in/faizah-abdullah-24a332b3",
@@ -76,7 +76,7 @@
     },
     {
       "service_id": 4,
-      "image": "/images/service/service2.png",
+      "image": "/images/service/service4.png",
       "service_name": "Rifa Rahmalia",
       "description": "Paket Fisioterapi Platinum dengan 12x pertemuan , Berupa Treatment Home Visit / On Clinic Sesuai Hari yang anda tentukan.",
       "url": "https://id.linkedin.com/in/faizah-abdullah-24a332b3",
