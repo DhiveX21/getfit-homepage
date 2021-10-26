@@ -1,4 +1,4 @@
-import React, { Component, useEffect } from "react";
+import React from "react";
 import Hero from "parts/main/LandingPage/Hero";
 import Founder from "parts/main/LandingPage/Founder";
 import Team from "parts/main/Team";

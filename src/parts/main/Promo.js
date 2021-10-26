@@ -31,6 +31,7 @@ export default function Promo(props) {
           // href="/promodetail"
           href={`https://api.whatsapp.com/send?phone=6282114272426&text=Halo%20Getfit%20Saya%20tertarik%20dengan%20promo%20${item.promo_name}%20bolehkah%20saya%20mendapatkan%20detailnya?.`}
           target="_blank"
+          rel="noreferrer"
           className="btn transform-gpu bg-white text-pink rounded-4xl py-2 px-8 border-4 border-white
           group-hover:bg-pink
           group-hover:text-white

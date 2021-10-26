@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Header from "parts/admin/Header";
 import Sidebar from "parts/admin/Sidebar";
 import Title from "parts/admin/widget/Title";
