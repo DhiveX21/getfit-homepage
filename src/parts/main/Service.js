@@ -72,10 +72,12 @@ export default function Service(props) {
                     </div>
                     <div className="self-center">
                       <Button
-                        isInternal
+                        isExternal
+                        target="_blank"
                         className="bg-pink py-2 px-10 rounded-3xl text-white transform transition ease-in-out duration-200  hover:bg-blue  hover:-translate-y-1  "
                         type="link"
-                        href={`/detail_service/${item.service_id}`}
+                        // href={`/detail_service/${item.service_id}`}
+                        href={`https://api.whatsapp.com/send?phone=6282114272426&text=Halo Getfit%20Saya%20tertarik%20dengan%20produk%20${item.description}%20bolehkah%20saya%20mendapatkan%20detailnya?.`}
                       >
                         Beli
                       </Button>

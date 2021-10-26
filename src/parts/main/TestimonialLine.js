@@ -13,7 +13,7 @@ export default function TestimonialLine(props) {
               {" "}
               <Button
                 type="link"
-                href="/testimoni"
+                href="/errorMaintenance"
                 className="shadow-md w-32 text-base font-medium rounded-4xl bg-blue py-2 lg:py-2 lg:w-32 lg:text-base"
               >
                 Detail

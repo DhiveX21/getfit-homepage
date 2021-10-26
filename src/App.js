@@ -15,6 +15,7 @@ import AdminListService from "pages/admin/ListService";
 import AdminListTeam from "pages/admin/ListTeam";
 import AdminListPromo from "pages/admin/ListPromo";
 import PatientDashboard from "pages/patient/Dashboard";
+import ErrorMaintenancePage from "pages/error_maintenance";
 // import "assets/scss/style.scss";
 import "assets/index.css";
 
@@ -36,6 +37,7 @@ function App() {
         <Route path="/admin/listTeam" component={AdminListTeam} />
         <Route path="/admin/listPromo" component={AdminListPromo} />
         <Route path="/patient/dashboard" component={PatientDashboard} />
+        <Route path="/errorMaintenance" component={ErrorMaintenancePage} />
       </Router>
     </div>
   );
