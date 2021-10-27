@@ -31,7 +31,7 @@ export default function Service(props) {
                 <div className="flex flex-wrap content-between justify-center rounded-3xl border-b-4  border-pink  shadow-lg h-144">
                   <div className="h-1/2 ">
                     <img
-                      className="rounded-3xl h-80"
+                      className="rounded-3xl h-72"
                       src={item.image}
                       alt="services"
                     ></img>

@@ -44,7 +44,7 @@ export default function VideoOpening(props) {
               data-aos="fade-left"
             >
               <Button
-                className="group shadow-md w-32 text-sm font-medium rounded-4xl bg-pink py-2 lg:py-2 lg:w-32 hero-detail-button hover:bg-blue hover:shadow-lg   hover:-translate-y-1 transform transition ease-in-out duration-200 "
+                className="group shadow-md w-32 rounded-4xl text-base bg-pink py-2 lg:py-2 lg:w-32 hero-detail-button hover:bg-blue hover:shadow-lg   hover:-translate-y-1 transform transition ease-in-out duration-200 "
                 data-replace='{ "-translate-y-1": "translate-y-10" }'
                 type="link"
                 href="/service"

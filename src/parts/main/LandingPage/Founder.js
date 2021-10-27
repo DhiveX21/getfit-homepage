@@ -47,7 +47,7 @@ export default function Founder(props) {
             data-aos="fade-up"
           >
             <Button
-              className="group shadow-md w-32 text-sm font-medium rounded-4xl bg-pink text-white py-2 lg:py-2 lg:w-32 hero-detail-button hover:bg-blue  md:text-center  hover:-translate-y-1 transform transition ease-in-out duration-200 "
+              className="group shadow-md w-32 font-medium rounded-4xl bg-pink text-white py-2 lg:py-2 lg:w-32 hero-detail-button hover:bg-blue  md:text-center  hover:-translate-y-1 transform transition ease-in-out duration-200 "
               type="link"
               href={props.data.url}
               target="_blank"

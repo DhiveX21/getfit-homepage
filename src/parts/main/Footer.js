@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "elements/Button";
 
 export default function Footer(props) {
   const maps_list = props.data.map((item, key) => (
@@ -26,14 +27,75 @@ export default function Footer(props) {
   ));
 
   return (
-    <footer className=" w-full bg-opacity-20 bg-hero-pattern">
-      <div className="flex flex-col justify-center p-6 text-center">
+    <footer className=" w-full  bg-hero-pattern">
+      <div className="flex justify-center transform translate-y-10">
+        <div className="bg-pink w-4/6 h-20 rounded-3xl ring-4 ring-white md:w-5/6 md:h-12 text-center text-white py-4 text-sm md:text-base md:py-2">
+          <div className="md:inline-block">Butuh Bantuan?</div>
+          <div className="md:inline-block">
+            <Button isExternal className="bg-blue py-1 px-4  mx-2 rounded-full">
+              Click disini
+            </Button>
+          </div>
+        </div>
+      </div>
+      <div className="flex flex-col justify-center p-6 text-center md:text-justify ">
         <div className="">{maps_list}</div>
-        <div className="">
-          {contactPerson}
-          <br />
-          {address}
-          <div className=""></div>
+        <div className="md:flex ">
+          <div className="md:p-2 md:w-1/3 text-center border-r-2">
+            {contactPerson}
+            <br />
+          </div>
+          <div className="md:p-2 md:w-1/3 text-center border-r-2">
+            {address}
+            <br />
+          </div>
+          <div className="md:p-2 md:w-1/3  text-center">
+            <div className="text-pink my-1 text-sm">Our Social Media</div>
+            <div className=" flex justify-center px-2 ">
+              <div className="p-2">
+                <img
+                  src="images/icons/facebook.png"
+                  alt="facebook"
+                  className="w-8"
+                ></img>
+              </div>
+              <div className="p-2">
+                <img
+                  src="images/icons/instagram.png"
+                  alt="instagram"
+                  className="w-8"
+                ></img>
+              </div>
+              <div className="p-2">
+                <img
+                  src="images/icons/telegram.png"
+                  alt="telegram"
+                  className="w-8"
+                ></img>
+              </div>
+              <div className="p-2">
+                <img
+                  src="images/icons/youtube.png"
+                  alt="youtube"
+                  className="w-8"
+                ></img>
+              </div>
+              <div className="p-2">
+                <img
+                  src="images/icons/tiktok.png"
+                  alt="tiktok"
+                  className="w-8"
+                ></img>
+              </div>
+              <div className="p-2">
+                <img
+                  src="images/icons/twitter.png"
+                  alt="twitter"
+                  className="w-8"
+                ></img>
+              </div>
+            </div>
+          </div>
           {/* <div className=" ">Our Service Links</div>
           <div className=" ">
             <Button
@@ -60,12 +122,10 @@ export default function Footer(props) {
           </div> */}
         </div>
       </div>
-      <div className="container mx-auto px-6">
-        <div className="mt-16 border-t-2 border-gray-300 flex flex-col items-center">
+      <div className="mx-auto ">
+        <div className="mt-16 rounded-t-5xl  bg-pink  flex flex-col items-center">
           <div className="w-2/3 text-center py-6">
-            <p className="text-sm text-blue-700 font-bold mb-2">
-              © 2021 Getfit With Physio
-            </p>
+            <p className="text-sm text-white ">© 2021 Getfit With Physio</p>
           </div>
         </div>
       </div>
