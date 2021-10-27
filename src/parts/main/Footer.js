@@ -52,42 +52,66 @@ export default function Footer(props) {
           <div className="md:p-2 md:w-1/3  text-center">
             <div className="text-pink my-1 text-sm">Our Social Media</div>
             <div className=" flex justify-center px-2 ">
-              <div className="p-2">
-                <img
-                  src="images/icons/facebook.png"
-                  alt="facebook"
-                  className="w-8"
-                ></img>
+              <div className="p-2 transform hover:-translate-y-1 duration-100 hover:scale-125">
+                <Button
+                  href="https://www.facebook.com/getfitwithphysio"
+                  type="link"
+                  isExternal
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img
+                    src="images/icons/facebook.png"
+                    alt="facebook"
+                    className="w-8"
+                  ></img>
+                </Button>
               </div>
-              <div className="p-2">
-                <img
-                  src="images/icons/instagram.png"
-                  alt="instagram"
-                  className="w-8"
-                ></img>
+              <div className="p-2 transform hover:-translate-y-1 duration-100 hover:scale-125">
+                <Button
+                  href="https://www.instagram.com/getfitwithphysio/"
+                  type="link"
+                  isExternal
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img
+                    src="images/icons/instagram.png"
+                    alt="instagram"
+                    className="w-8"
+                  ></img>
+                </Button>
               </div>
-              <div className="p-2">
+              <div className="p-2 transform hover:-translate-y-1 duration-100 hover:scale-125">
                 <img
                   src="images/icons/telegram.png"
                   alt="telegram"
                   className="w-8"
                 ></img>
               </div>
-              <div className="p-2">
+              <div className="p-2 transform hover:-translate-y-1 duration-100 hover:scale-125">
                 <img
                   src="images/icons/youtube.png"
                   alt="youtube"
                   className="w-8"
                 ></img>
               </div>
-              <div className="p-2">
-                <img
-                  src="images/icons/tiktok.png"
-                  alt="tiktok"
-                  className="w-8"
-                ></img>
+              <div className="p-2 transform hover:-translate-y-1 duration-100 hover:scale-125">
+                <Button
+                  href="https://www.tiktok.com/@getfitwithphysio"
+                  type="link"
+                  isExternal
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img
+                    src="images/icons/tiktok.png"
+                    alt="tiktok"
+                    className="w-8"
+                  ></img>
+                </Button>
               </div>
-              <div className="p-2">
+              <div className="p-2 transform hover:-translate-y-1 duration-100 hover:scale-125">
                 <img
                   src="images/icons/twitter.png"
                   alt="twitter"
