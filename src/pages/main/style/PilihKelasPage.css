@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500;600;700;800;900&display=swap");
+.pilih-kelas {
+  font-family: "Red Hat Display", sans-serif;
+  background-color: #1b5c79;
+  padding: 60px;
+}
+
+.pilih-kelas__wrapper {
+  padding: 45px;
+  background-color: #57b7dd;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 20px;
+  -webkit-column-gap: 30px;
+          column-gap: 30px;
+}
+
+.pilih-kelas__illustration {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pilih-kelas__illustration__title h2 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 48px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.pilih-kelas__menu {
+  overflow-y: hidden;
+  width: 50%;
+  background: #ffffff;
+  -webkit-box-shadow: 0px 0px 25px 11px rgba(27, 92, 121, 0.5);
+          box-shadow: 0px 0px 25px 11px rgba(27, 92, 121, 0.5);
+  border-radius: 20px;
+  padding: 30px;
+  height: 760px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 7px;
+}
+
+.pilih-kelas__menu__title h2 {
+  font-style: normal;
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 58px;
+  color: #57b7dd;
+}
+
+.pilih-kelas__menu__card {
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  background: #ffffff;
+  border: 5px solid #ffffff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+}
+
+.pilih-kelas__menu__card:hover {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+}
+
+.pilih-kelas__menu__card__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pilih-kelas__menu__card__item__title {
+  border-right: #57b7dd solid 5px;
+  padding: 22px;
+}
+
+.pilih-kelas__menu__card__item__title h3 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 47px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  color: #333333;
+}
+
+.pilih-kelas__menu__card__item__desc {
+  padding: 22px;
+}
+
+.pilih-kelas__menu__card__item__desc span {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 26px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #979797;
+}
+/*# sourceMappingURL=PilihKelasPage.css.map */
